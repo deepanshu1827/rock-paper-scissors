@@ -28,3 +28,24 @@
 **User Interface:** The game can be a simple text-based console application or a graphical user interface (GUI) using libraries like Tkinter, which displays choices and results. 
 
 **Logic:** The core game logic relies on conditional statements to compare the player's input and the computer's random choice to declare a winner or a tie. 
+
+
+
+**Screenshots--**
+
+**1.** 
+<img width="960" height="448" alt="(1)" src="https://github.com/user-attachments/assets/1329554c-0d23-4a1e-951c-ee154874676f" />
+
+**2.**
+<img width="960" height="446" alt="(2)" src="https://github.com/user-attachments/assets/b143673f-1187-4295-9f24-dc9a8d7e427f" />
+
+**3.**
+<img width="960" height="448" alt="(3)" src="https://github.com/user-attachments/assets/93a46180-3cf4-4252-bc5e-8fd82b1a86c0" />
+
+**4.**
+<img width="959" height="448" alt="(4)" src="https://github.com/user-attachments/assets/240df6e3-87c4-474a-b3f0-8fd5a6c7d45b" />
+
+**5.**
+<img width="960" height="447" alt="(5)" src="https://github.com/user-attachments/assets/89c0bbf4-d174-46dc-86ab-f129c461c90f" />
+
+
