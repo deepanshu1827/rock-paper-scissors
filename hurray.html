@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hurray!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="hurray-page">
+
+  <div class="stars">
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+  </div>
+
+  <div class="hurray-container">
+    <div class="trophy">🏆</div>
+    <h1 class="hurray-text">HURRAY!!</h1>
+    <h2 id="winner-text" class="winner-subtext"></h2>
+    <button id="reset-game" class="play-again-btn">RESET</button>
+  </div>
+
+  <!-- Rules Popup -->
+  <div id="rules-popup" class="rules-popup">
+    <div class="rules-box">
+      <h3>Game Rules</h3>
+      <ul>
+        <li>Rock beats Scissors.</li>
+        <li>Scissors beats Paper.</li>
+        <li>Paper beats Rock.</li>
+        <li>First to reach 10 points wins the game!</li>
+      </ul>
+      <button id="close-popup" class="close-popup">✖</button>
+    </div>
+  </div>
+
+  <button id="rules-btn" class="rules-btn">RULES</button>
+
+  <script>
+    // Get scores from localStorage
+    const userScore = parseInt(localStorage.getItem("userScore")) || 0;
+    const computerScore = parseInt(localStorage.getItem("computerScore")) || 0;
+    const winnerText = document.getElementById("winner-text");
+
+    // Decide who won
+    if (userScore >= 10 && userScore > computerScore) {
+      winnerText.textContent = "YOU WON THE GAME";
+    } else if (computerScore >= 10 && computerScore > userScore) {
+      winnerText.textContent = "COMPUTER WON THE GAME";
+    } else {
+      winnerText.textContent = "GAME OVER";
+    }
+
+    // Reset game button
+    document.getElementById("reset-game").addEventListener("click", () => {
+      localStorage.setItem("userScore", 0);
+      localStorage.setItem("computerScore", 0);
+      window.location.href = "index.html"; // go back to start page
+    });
+
+    // Rules popup logic
+    const rulesBtn = document.getElementById("rules-btn");
+    const rulesPopup = document.getElementById("rules-popup");
+    const closePopup = document.getElementById("close-popup");
+
+    rulesBtn.addEventListener("click", () => {
+      rulesPopup.style.display = "block";
+    });
+    closePopup.addEventListener("click", () => {
+      rulesPopup.style.display = "none";
+    });
+  </script>
+</body>
+</html>
